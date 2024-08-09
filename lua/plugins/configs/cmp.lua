@@ -113,6 +113,9 @@ local options = {
   },
 }
 
+-- specify the full path...
+require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/lua/custom/snippets"})
+
 if cmp_style ~= "atom" and cmp_style ~= "atom_colored" then
   options.window.completion.border = border "CmpBorder"
 end

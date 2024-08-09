@@ -31,6 +31,8 @@ opt.mouse = "a"
 opt.number = true
 opt.numberwidth = 2
 opt.ruler = false
+opt.relativenumber = true
+opt.colorcolumn = "80"
 
 -- disable nvim intro
 opt.shortmess:append "sI"
