@@ -96,11 +96,17 @@ local plugins = {
         "rust-analyzer"
       }
     }
-  }
+  },
+  {
+    "barrett-ruth/live-server.nvim",
+    dependencies = "lukahartwig/pnpm.nvim",
+    build = 'pnpm add -g live-server',
+    cmd = { 'LiveServerStart', 'LiveServerStop' },
+    -- config = true
+    config = function (_, opts)
+      require('live-server').setup(opts)
+    end,
+  },
 }
-
-
-
-
 
 return plugins

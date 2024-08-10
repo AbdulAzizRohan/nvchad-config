@@ -34,6 +34,10 @@ opt.ruler = false
 opt.relativenumber = true
 opt.colorcolumn = "80"
 
+-- Wrapping
+opt.wrap = true
+opt.textwidth = 80
+
 -- disable nvim intro
 opt.shortmess:append "sI"
 
