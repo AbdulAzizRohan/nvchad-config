@@ -24,10 +24,10 @@ lspconfig.tsserver.setup {
   }
 }
 
--- lspconfig.html.setup {
---   capabilities = capabilities,
---   on_attach = on_attach,
--- }
+lspconfig.html.setup {
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  on_attach = on_attach,
+}
 
 lspconfig.cssls.setup {
   capabilities = capabilities,
