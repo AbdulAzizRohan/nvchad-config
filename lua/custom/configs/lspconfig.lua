@@ -24,6 +24,26 @@ lspconfig.tsserver.setup {
   }
 }
 
+-- lspconfig.html.setup {
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- }
+
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+lspconfig.tailwindcss.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+lspconfig.eslint.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 --lspconfig.rust_analyzer.setup({
 --  on_attach = on_attach,
 --  capabilites = capabilities,

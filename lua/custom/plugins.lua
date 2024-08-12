@@ -98,8 +98,9 @@ local plugins = {
         "typescript-language-server",
         "jdtls",
         "eslint-lsp",
-        "prettier",
+        "prettierd",
         "js-debug-adapter",
+        "html-lsp",
       }
     }
   },
@@ -112,6 +113,9 @@ local plugins = {
     config = function (_, opts)
       require('live-server').setup(opts)
     end,
+  },
+  {
+    "microsoft/vscode-css-languageservice"
   },
   -- {
   --   "mfussenegger/nvim-lint",
