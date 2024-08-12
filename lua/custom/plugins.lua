@@ -93,7 +93,13 @@ local plugins = {
         "clangd",
         "clang-format",
         "codelldb",
-        "rust-analyzer"
+        "rust-analyzer",
+        "lua-language-server",
+        "typescript-language-server",
+        "jdtls",
+        "eslint-lsp",
+        "prettier",
+        "js-debug-adapter",
       }
     }
   },
@@ -107,6 +113,20 @@ local plugins = {
       require('live-server').setup(opts)
     end,
   },
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   event = "VeryLazy",
+  --   config = function ()
+  --     require "custom.configs.lint"
+  --   end
+  -- },
+  -- {
+  --   "mhartington/formatter.nvim",
+  --   event = "VeryLazy",
+  --   opts = function ()
+  --     return require "custom.configs.formatter"
+  --   end
+  -- },
 }
 
 return plugins

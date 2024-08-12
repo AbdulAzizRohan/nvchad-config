@@ -14,6 +14,16 @@ lspconfig.clangd.setup {
   capabilites = capabilities,
 }
 
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    }
+  }
+}
+
 --lspconfig.rust_analyzer.setup({
 --  on_attach = on_attach,
 --  capabilites = capabilities,
