@@ -35,7 +35,7 @@ opt.relativenumber = true
 opt.colorcolumn = "80"
 
 -- Wrapping 
-opt.textwidth = 0
+opt.textwidth = 80
 opt.wrapmargin = 0
 opt.wrap = true
 opt.linebreak = true

@@ -2,8 +2,11 @@ local plugins = {
   {
     "rcarriga/nvim-dap-ui",
     event = "VeryLazy",
-    dependencies = "mfussenegger/nvim-dap",
-    dependencies = "nvim-neotest/nvim-nio",
+    -- dependencies = "mfussenegger/nvim-dap",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "mfussenegger/nvim-dap",
+    },
     config = function()
       local dap = require("dap")
       local dapui = require("dapui")
@@ -117,6 +120,14 @@ local plugins = {
   {
     "microsoft/vscode-css-languageservice"
   },
+  {
+	  'xeluxee/competitest.nvim',
+	  dependencies = 'MunifTanjim/nui.nvim',
+    event = "VeryLazy",
+	  config = function()
+      require('competitest').setup()
+    end,
+  },
   -- {
   --   "mfussenegger/nvim-lint",
   --   event = "VeryLazy",
@@ -131,6 +142,17 @@ local plugins = {
   --     return require "custom.configs.formatter"
   --   end
   -- },
+  -- {
+  --   'projekt0n/github-nvim-theme',
+  --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  --   priority = 1000, -- make sure to load this before all the other start plugins
+  --   config = function()
+  --     require('github-theme').setup({
+  --       -- ...
+  --     })
+  --     vim.cmd('colorscheme github_dark_high_contrast')
+  --   end,
+  -- }
 }
 
 return plugins
