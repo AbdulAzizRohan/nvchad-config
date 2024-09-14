@@ -60,11 +60,11 @@ M.general = {
     -- Split window vertically
     ["<leader>sv"] = { "<cmd> vsplit <CR>", "Vertical split" },
 
-    -- Resize window with Alt + arrow keys
-    ["<A-h>"] = { "<C-w><", "Decrease width" },
-    ["<A-l>"] = { "<C-w>>", "Increase width" },
-    ["<A-j>"] = { "<C-w>-", "Decrease height" },
-    ["<A-k>"] = { "<C-w>+", "Increase height" },
+    -- Resize windows using Ctrl + Arrow keys
+    ["<C-Up>"] = { "<cmd> resize +2<CR>", "Increase height" },
+    ["<C-Down>"] = { "<cmd> resize -2<CR>", "Decrease height" },
+    ["<C-Left>"] = { "<cmd> vertical resize -2<CR>", "Decrease width" },
+    ["<C-Right>"] = { "<cmd> vertical resize +2<CR>", "Increase width" },
   },
 
   t = {
