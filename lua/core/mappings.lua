@@ -52,6 +52,19 @@ M.general = {
       end,
       "LSP formatting",
     },
+    -- Existing mappings...
+
+    -- Split window horizontally
+    ["<leader>sh"] = { "<cmd> split <CR>", "Horizontal split" },
+
+    -- Split window vertically
+    ["<leader>sv"] = { "<cmd> vsplit <CR>", "Vertical split" },
+
+    -- Resize window with Alt + arrow keys
+    ["<A-h>"] = { "<C-w><", "Decrease width" },
+    ["<A-l>"] = { "<C-w>>", "Increase width" },
+    ["<A-j>"] = { "<C-w>-", "Decrease height" },
+    ["<A-k>"] = { "<C-w>+", "Increase height" },
   },
 
   t = {
