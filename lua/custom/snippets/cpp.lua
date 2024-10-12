@@ -101,6 +101,9 @@ ls.add_snippets("cpp", {
     t({
       "",
       "",
+      "  fin.close();",
+      "  fout.close();";
+      "",
       "  return 0;",
       "}"
     })
