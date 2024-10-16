@@ -65,6 +65,12 @@ M.general = {
     ["<C-Down>"] = { "<cmd> resize -2<CR>", "Decrease height" },
     ["<C-Left>"] = { "<cmd> vertical resize -2<CR>", "Decrease width" },
     ["<C-Right>"] = { "<cmd> vertical resize +2<CR>", "Increase width" },
+
+    -- Remap <C-d> to scroll down and center the window
+    ["<C-d>"] = { "<C-d>zz", "Scroll down and center" },
+
+    -- Remap <C-u> to scroll up and center the window
+    ["<C-u>"] = { "<C-u>zz", "Scroll up and center" },
   },
 
   t = {
