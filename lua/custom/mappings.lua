@@ -33,4 +33,13 @@ M.crates = {
   }
 }
 
+M.vimtex = {
+  n = {
+    ["<leader>ll"] = { "<cmd>VimtexCompile<CR>", "Compile LaTeX document" },
+    ["<leader>lv"] = { "<cmd>VimtexView<CR>", "View PDF" },
+    ["<leader>lc"] = { "<cmd>VimtexClean<CR>", "Clean auxiliary files" },
+    ["<leader>lt"] = { "<cmd>VimtexTocToggle<CR>", "Toggle table of contents" },
+  }
+}
+
 return M

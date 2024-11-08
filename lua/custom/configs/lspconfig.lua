@@ -45,6 +45,25 @@ lspconfig.eslint.setup{
   capabilities = capabilities,
 }
 
+-- Setup texlab with lspconfig
+lspconfig.texlab.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    texlab = {
+      build = {
+        executable = "latexmk",
+        args = { "-pdf", "-interaction=nonstopmode", "%f" },
+        onSave = true,
+      },
+      forwardSearch = {
+        executable = "zathura",
+        args = { "--synctex-forward", "%l:1:%f", "%p" },
+      },
+    },
+  },
+}
+
 --lspconfig.rust_analyzer.setup({
 --  on_attach = on_attach,
 --  capabilites = capabilities,
