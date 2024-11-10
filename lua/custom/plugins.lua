@@ -166,7 +166,7 @@ local plugins = {
   --    require("refact-neovim").setup({
   --       address_url = "Refact",
   --       api_key = "eBoG4p1JJxIKMS0trdqDlALQ",
-  --       accept_keymap = "<C-Space>",
+  --       accept_keymap = "<C-V>",
   --     })
   --   end
   -- },
