@@ -57,6 +57,13 @@ local plugins = {
       require("core.utils").load_mappings("dap")
     end
   },
+  -- {
+  --   "mfussenegger/nvim-dap-python",
+  --   ft = "python",
+  --   dependencies = {
+  --     "mfussenegger/nvim-dap",
+  --   },
+  -- },
   {
     "jose-elias-alvarez/null-ls.nvim",
     event = "VeryLazy",
@@ -104,6 +111,10 @@ local plugins = {
         "prettierd",
         "js-debug-adapter",
         "html-lsp",
+        "pyright",
+        "mypy",
+        "ruff",
+        "black",
       }
     }
   },
