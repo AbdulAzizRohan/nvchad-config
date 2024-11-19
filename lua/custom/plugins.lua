@@ -165,7 +165,8 @@ local plugins = {
         build_dir = "build",
         options = {
           "-pdf",
-          '-pdflatex="pdflatex -shell-escape %O %S"',
+          -- '-pdflatex="pdflatex -shell-escape %O %S"',
+          '-lualatex="lualatex -shell-escape %O %S"',
         }
       }
     end
