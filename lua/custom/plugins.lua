@@ -153,22 +153,47 @@ local plugins = {
       })
     end,
   },
+  -- {
+  --   "lervag/vimtex",
+  --   lazy = false,     -- we don't want to lazy load VimTeX
+  --   -- tag = "v2.15", -- uncomment to pin to a specific release
+  --   init = function()
+  --     -- vim.g.maplocalleader = ","
+  --     -- VimTeX configuration goes here
+  --     vim.g.vimtex_compiler_method = 'latexmk'
+  --     vim.g.vimtex_view_method = "zathura"
+  --     vim.g.vimtex_compiler_latexmk = {
+  --       build_dir = "build",
+  --       options = {
+  --         -- "-pdf",
+  --         -- '-pdflatex="pdflatex -shell-escape %O %S"',
+  --         '-lualatex="lualatex -shell-escape %O %S"',
+  --       }
+  --     }
+  --   end
+  -- },
   {
     "lervag/vimtex",
-    lazy = false,     -- we don't want to lazy load VimTeX
-    -- tag = "v2.15", -- uncomment to pin to a specific release
+    lazy = false,
     init = function()
-      -- vim.g.maplocalleader = ","
-      -- VimTeX configuration goes here
       vim.g.vimtex_compiler_method = 'latexmk'
       vim.g.vimtex_view_method = "zathura"
       vim.g.vimtex_compiler_latexmk = {
         build_dir = "build",
         options = {
-          -- "-pdf",
-          -- '-pdflatex="pdflatex -shell-escape %O %S"',
-          '-lualatex="lualatex -shell-escape %O %S"',
+          "-lualatex",           -- Use LuaLaTeX engine
+          "-shell-escape",       -- Allow shell escape
+          "-verbose",
+          "-file-line-error",
+          "-synctex=1",
+          "-interaction=nonstopmode",
         }
+      }
+      -- Explicitly set the callback mode
+      vim.g.vimtex_compiler_latexmk_engines = {
+        _                = '-lualatex',
+        lualatex        = '-lualatex',
+        pdflatex        = '-pdf'
       }
     end
   },
