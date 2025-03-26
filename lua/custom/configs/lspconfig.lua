@@ -59,7 +59,7 @@ lspconfig.texlab.setup{
     texlab = {
       build = {
         executable = "latexmk",
-        args = { "-lualatex", "-interaction=nonstopmode", "-synctex=1", "%f" },
+        args = { "-lualatex", "-shell-escape", "-interaction=nonstopmode", "-synctex=1", "%f" },
         onSave = true,
       },
       forwardSearch = {

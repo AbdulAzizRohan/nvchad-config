@@ -64,13 +64,13 @@ local plugins = {
   --     "mfussenegger/nvim-dap",
   --   },
   -- },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    event = "VeryLazy",
-    opts = function()
-      return require("custom.configs.null-ls")
-    end,
-  },
+  -- {
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   event = "VeryLazy",
+  --   opts = function()
+  --     return require("custom.configs.null-ls")
+  --   end,
+  -- },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -98,6 +98,7 @@ local plugins = {
   },
   {
     "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
         "clangd",
@@ -242,13 +243,13 @@ local plugins = {
   --     require "custom.configs.lint"
   --   end
   -- },
-  -- {
-  --   "mhartington/formatter.nvim",
-  --   event = "VeryLazy",
-  --   opts = function ()
-  --     return require "custom.configs.formatter"
-  --   end
-  -- },
+  {
+    "mhartington/formatter.nvim",
+    event = "VeryLazy",
+    opts = function ()
+      return require "custom.configs.formatter"
+    end
+  },
   -- {
   --   'projekt0n/github-nvim-theme',
   --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
